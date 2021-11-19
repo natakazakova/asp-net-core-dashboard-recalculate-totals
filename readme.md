@@ -19,6 +19,7 @@ The example also supports data export modifying Total values during the export. 
 
 * [CustomGridTotalsExtension.js](./CS/AspNetCoreDashboard_RecalculateTotals/wwwroot/js/CustomGridTotalsExtension.js)
 * [_Layout.cshtml](./CS/AspNetCoreDashboard_RecalculateTotals/Pages/_Layout.cshtml)
+* [Startup.cs](./CS/AspNetCoreDashboard_RecalculateTotals/Startup.cs)
 * [CustomGridTotalsExportModule.cs](./CS/AspNetCoreDashboard_RecalculateTotals/Classes/CustomGridTotalsExportModule.cs)
 * [GridTotal.cs](./CS/AspNetCoreDashboard_RecalculateTotals/Classes/GridTotal.cs)
 
