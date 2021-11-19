@@ -11,7 +11,7 @@ The example demonstrates how to recalculate totals in the Grid dashboard item wh
 
 The example supports all the dashboard's [Total types](https://docs.devexpress.com/Dashboard/117302/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/grid/totals#totals-overview) except for "Auto". If you apply the "Auto" total type in the dashboard, the "Not Supported" text will be shown instead of the total value.
 
-The example also supports data export modifying Total values during the export. This functionality is implemented by overriding the export procedure in the (DashboardConfigurator.CustomExport)[https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.CustomExport] event handler.
+The example also supports data export modifying Total values during the export. This functionality is implemented by overriding the export procedure in the [DashboardConfigurator.CustomExport])https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.CustomExport) event handler.
 
 <!-- default file list -->
 
