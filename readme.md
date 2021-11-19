@@ -30,7 +30,3 @@ The example also supports data export modifying Total values during the export. 
 * [Totals](https://docs.devexpress.com/Dashboard/117302/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/grid/totals?p=netframework)
 * [Manage Extensions in ASP.NET Core](https://docs.devexpress.com/Dashboard/403354/web-dashboard/aspnet-core-dashboard-control/manage-extensions?p=netframework)
 * [Access to Underlying Widgets in ASP.NET Core](https://docs.devexpress.com/Dashboard/401090/web-dashboard/aspnet-core-dashboard-control/access-to-underlying-widgets?p=netframework)
-
-## More Examples
-
-* [Dashboard for ASP.NET Core - Custom Item Gallery](https://github.com/DevExpress-Examples/asp-net-core-dashboard-custom-item-gallery)
