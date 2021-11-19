@@ -1,0 +1,11 @@
+{
+    "name": "aspnetcoredashboard_recalculatetotals",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "devextreme": "21.1.5",
+        "@devexpress/analytics-core": "21.1.5",
+        "devexpress-dashboard": "21.1.5",
+        "jquery-ui-dist": "^1.12.1"
+    }
+}
