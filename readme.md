@@ -1,20 +1,21 @@
-<!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/393051741/21.2.1%2B)
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1019660)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
-# Dashboard for ASP.NET Core - How to recalculate totals on applying Grid filtering
+# Dashboard for ASP.NET Core - How to Recalculate Totals when You Filter a Grid
 
-By default, the Dashboard does not fully support Grid column filters. They may only be used to select which data to show in the grid and they do not affect Total values calculated by the dashboard data engine. As a result, when you apply grid column filters, the grid shows filtered data, but Totals remain the same.
+The Dashboard does not fully support Grid column filters out of the box. These filters can only be used to select which data to show in the Grid item and they do not affect Total values calculated by the dashboard data engine. As a result, when you apply grid column filters, the Grid item shows filtered data, but Totals remain the same.
 
-The example demonstrates how to recalculate totals in the Grid dashboard item when when you apply column filtering in the grid. This functionality is implemented using the dxDataGrid's [Total Summary](https://js.devexpress.com/Documentation/Guide/UI_Components/DataGrid/Summaries/Total_Summary/) functionality.
+The example shows how to recalculate totals when when you apply column filters to the Grid dashboard item.
 
-The example supports all the dashboard's [Total types](https://docs.devexpress.com/Dashboard/117302/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/grid/totals#totals-overview) except for "Auto". If you apply the "Auto" total type in the dashboard, the "Not Supported" text will be shown instead of the total value.
+> The example supports all the dashboard's [Total types](https://docs.devexpress.com/Dashboard/117302/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/grid/totals#totals-overview) except for "Auto". If you apply the "Auto" total type in the dashboard, the "Not Supported" text will be shown instead of the total value.
 
-The example also supports data export modifying Total values during the export. This functionality is implemented by overriding the export procedure in the [DashboardConfigurator.CustomExport](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.CustomExport) event handler.
+## Example Overview
+### Client
+
+The [CustomGridTotalsExtension.js](./CS/AspNetCoreDashboard_RecalculateTotals/wwwroot/js/CustomGridTotalsExtension.js) custom extension implements the required functionality on the client. The `dxDataGrid`'s [Total Summary](https://js.devexpress.com/Documentation/Guide/UI_Components/DataGrid/Summaries/Total_Summary/) is used to modify the Grid item's underlying UI component. The [ViewerApiExtensionOptions.onItemWidgetOptionsPrepared](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtensionOptions?p=netframework#js_devexpress_dashboard_viewerapiextensionoptions_onitemwidgetoptionsprepared) event allows you to access underlying `dxDataGrid` UI component and change its options.
+
+### Server
+
+The example also modifies Total values when you export data. The [DashboardConfigurator.CustomExport](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.CustomExport) event handler overrides the export procedure.
 
 <!-- default file list -->
-
 ## Files to Look At
 
 * [CustomGridTotalsExtension.js](./CS/AspNetCoreDashboard_RecalculateTotals/wwwroot/js/CustomGridTotalsExtension.js)
@@ -27,6 +28,6 @@ The example also supports data export modifying Total values during the export. 
 
 ## Documentation
 
-* [Totals](https://docs.devexpress.com/Dashboard/117302/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/grid/totals?p=netframework)
-* [Manage Extensions in ASP.NET Core](https://docs.devexpress.com/Dashboard/403354/web-dashboard/aspnet-core-dashboard-control/manage-extensions?p=netframework)
-* [Access to Underlying Widgets in ASP.NET Core](https://docs.devexpress.com/Dashboard/401090/web-dashboard/aspnet-core-dashboard-control/access-to-underlying-widgets?p=netframework)
+* [Totals](https://docs.devexpress.com/Dashboard/117302/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/grid/totals)
+* [Manage Extensions in ASP.NET Core](https://docs.devexpress.com/Dashboard/403354/web-dashboard/aspnet-core-dashboard-control/manage-extensions)
+* [Access to Underlying Widgets in ASP.NET Core](https://docs.devexpress.com/Dashboard/401090/web-dashboard/aspnet-core-dashboard-control/access-to-underlying-widgets)
